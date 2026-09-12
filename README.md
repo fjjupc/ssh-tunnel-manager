@@ -40,11 +40,13 @@ npm run tauri build
 
 ## 配置位置
 
-应用数据目录下的 `config.json`（由 Tauri `app_data_dir` 决定）：
+配置保存在**当前登录用户**的系统应用数据目录中的 `config.json`（运行时由 Tauri `app_data_dir` 自动解析，不写死任何用户名）：
 
-- Windows：`%APPDATA%\com.fjjupc.ssh-tunnel-manager\config.json`
-- macOS：`~/Library/Application Support/com.fjjupc.ssh-tunnel-manager/config.json`
-- Linux：`~/.local/share/com.fjjupc.ssh-tunnel-manager/config.json`
+- Windows：`%APPDATA%\app.ssh-tunnel-manager\config.json`
+- macOS：`~/Library/Application Support/app.ssh-tunnel-manager/config.json`
+- Linux：`~/.local/share/app.ssh-tunnel-manager/config.json`
+
+其中 `%APPDATA%` / `~` 均为当前用户环境变量/主目录。换设备、换账号会自动落到对应用户目录。
 
 密码以明文保存在本地配置中（个人工具首版约定）；请勿在不受信任环境共享配置文件。
 

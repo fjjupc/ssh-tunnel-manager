@@ -2,7 +2,7 @@
 name = "ssh-tunnel-manager"
 version = "0.1.0"
 description = "Cross-platform SSH tunnel manager"
-authors = ["fjjupc"]
+authors = ["SSH Tunnel Manager contributors"]
 edition = "2021"
 
 [lib]
